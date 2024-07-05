@@ -1,53 +1,51 @@
 <script>
 export default {
   name: "UpPartFooter",
+  data() {
+    return {
+      images: [
+        {
+          src: "buy-comics-digital-comics.png",
+          text: "DIGITAL COMICS",
+        },
+        {
+          src: "buy-comics-merchandise.png",
+          text: "DC MERCHANDISE",
+        },
+        {
+          src: "buy-comics-subscriptions.png",
+          text: "SUBSCRIPTION",
+        },
+        {
+          src: "buy-comics-shop-locator.png",
+          text: "COMIC SHOP LOCATOR",
+        },
+        {
+          src: "buy-dc-power-visa.svg",
+          text: "DC POWER VISA",
+        },
+      ],
+    };
+  },
+  methods: {
+    getImagePath(immagine) {
+      return new URL(immagine, import.meta.url).href;
+    },
+  },
 };
 </script>
 
 <template>
   <div class="containerAll">
     <div class="mainContainer">
-      <div class="contImgText">
+      <div class="contImgText" v-for="(image, index) in images" :key="index">
         <div class="contImg">
           <img
-            src="/src/assets/ecommercePhoto/buy-comics-digital-comics.png"
+            :src="getImagePath(`../../assets/ecommercePhoto/${image.src}`)"
             alt=""
           />
         </div>
-        <span>DIGITAL COMICS</span>
-      </div>
-      <div class="contImgText">
-        <div class="contImg">
-          <img
-            src="/src/assets/ecommercePhoto/buy-comics-merchandise.png"
-            alt=""
-          />
-        </div>
-        <span>DC MERCHANDISE</span>
-      </div>
-      <div class="contImgText">
-        <div class="contImg">
-          <img
-            src="/src/assets/ecommercePhoto/buy-comics-shop-locator.png"
-            alt=""
-          />
-        </div>
-        <span>SUBSCRIPTION</span>
-      </div>
-      <div class="contImgText">
-        <div class="contImg">
-          <img
-            src="/src/assets/ecommercePhoto/buy-comics-subscriptions.png"
-            alt=""
-          />
-        </div>
-        <span>COMIC SHOP LOCATOR</span>
-      </div>
-      <div class="contImgText">
-        <div class="contImg">
-          <img src="/src/assets/ecommercePhoto/buy-dc-power-visa.svg" alt="" />
-        </div>
-        <span>DC POWER VISA</span>
+        <span>{{ image.text }}</span>
       </div>
     </div>
   </div>
@@ -60,17 +58,30 @@ export default {
 .containerAll {
   background-color: #0f82f7;
   padding: 3rem 0;
+
   .mainContainer {
-    @include flexa("spaceAround");
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
     .contImgText {
-      @include flexa("center-center");
+      display: flex;
+      align-items: center;
+      width: auto;
+
       .contImg {
         height: 3rem;
         width: 2.5rem;
         margin-right: 0.5rem;
+
+        img {
+          width: 100%;
+        }
       }
+
       span {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
         color: white;
       }
     }

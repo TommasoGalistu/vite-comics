@@ -13,9 +13,11 @@ export default {
 </script>
 
 <template>
-  <UpPartFooter />
-  <PolicyPart />
-  <FinalPartFooter />
+  <footer>
+    <UpPartFooter />
+    <PolicyPart />
+    <FinalPartFooter />
+  </footer>
 </template>
 
 <style lang="scss" scoped>
