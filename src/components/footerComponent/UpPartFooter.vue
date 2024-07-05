@@ -60,6 +60,7 @@ export default {
   padding: 3rem 0;
 
   .mainContainer {
+    padding: 0 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
