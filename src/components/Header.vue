@@ -5,8 +5,37 @@ export default {
 </script>
 
 <template>
-  <h1>header</h1>
+  <div class="mainContainer">
+    <div class="contImg">
+      <img src="/dc-logo.png" alt="logo dc" />
+    </div>
+
+    <ul>
+      <li v-for="(num, index) in 10" :key="index">{{ num }}</li>
+    </ul>
+  </div>
 </template>
 
-<style lang="sass" scoped>
+<style lang="scss" scoped>
+@use "../style/partials/_mixins.scss" as *;
+
+.mainContainer {
+  @include flexa("spaceBetween");
+  .contImg {
+    width: 4.5rem;
+    @include flexa("low-center");
+  }
+  ul {
+    @include flexa();
+    // debag
+    background-color: red;
+
+    li {
+      list-style-type: none;
+      padding: 2rem 1rem;
+      //   debug
+      border-bottom: 2px solid green;
+    }
+  }
+}
 </style>

@@ -8,5 +8,5 @@ export default {
   <h1>Footer</h1>
 </template>
 
-<style lang="sass" scoped>
+<style lang="scss" scoped>
 </style>
