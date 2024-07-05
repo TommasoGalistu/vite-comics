@@ -1,11 +1,11 @@
 <script>
 export default {
-  name: "HeaderPage",
+  name: "ContentPage",
 };
 </script>
 
 <template>
-  <h1>header</h1>
+  <h1>COntent Page</h1>
 </template>
 
 <style lang="sass" scoped>
