@@ -69,7 +69,7 @@ export default {
   background-position-y: center;
   background-repeat: no-repeat, repeat;
   filter: saturate(50%);
-  //   background-color: $backGroundColorFooter;
+  //   background-color: $sfondoFooter;
 
   .mainContainer {
     padding: 1.5rem 0;

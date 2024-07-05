@@ -24,13 +24,13 @@ export default {
 @use "../../style/partials/_mixins.scss" as *;
 @use "../../style/partials/variables.scss" as *;
 .containerAll {
-  background-color: $backGroundColorFooter;
+  background-color: $sfondoFooter;
   .mainContainer {
     @include flexa("spaceBetween");
     padding: 2rem 0;
 
     button {
-      background-color: $backGroundColorFooter;
+      background-color: $sfondoFooter;
       color: white;
       border: 2px solid blue;
       padding: 0.5rem;
