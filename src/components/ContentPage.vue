@@ -5,8 +5,21 @@ export default {
 </script>
 
 <template>
-  <h1>COntent Page</h1>
+  <div class="containerAll">
+    <div class="mainContainer">
+      <h1>content</h1>
+    </div>
+  </div>
 </template>
 
-<style lang="sass" scoped>
+<style lang="scss" scoped>
+@use "../style/partials/_mixins.scss" as *;
+@use "../style/partials/variables.scss" as *;
+
+.containerAll {
+  background-color: black;
+  color: white;
+  height: 5rem;
+  @include flexa("low-center");
+}
 </style>

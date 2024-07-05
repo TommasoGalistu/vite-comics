@@ -2,6 +2,7 @@
 import HeaderPage from "../src/components/Header.vue";
 import FooterPage from "../src/components/FooterPage.vue";
 import ContentPage from "../src/components/ContentPage.vue";
+
 export default {
   name: "App",
   components: {

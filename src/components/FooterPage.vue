@@ -13,7 +13,6 @@ export default {
 </script>
 
 <template>
-  <h1>Footer</h1>
   <UpPartFooter />
   <PolicyPart />
   <FinalPartFooter />
