@@ -25,7 +25,7 @@ export default {
   .mainContainer {
     @include flexa("spaceBetween");
     .contImg {
-      width: 4.5rem;
+      height: 4.5rem;
       @include flexa("low-center");
     }
     ul {
