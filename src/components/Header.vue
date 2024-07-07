@@ -12,7 +12,7 @@ export default {
         {
           text: "COMICS",
           url: "#",
-          current: true,
+          current: false,
         },
         {
           text: "MOVIES",
@@ -55,7 +55,19 @@ export default {
           current: false,
         },
       ],
+      linkAttivato: {
+        index: "",
+        boolValue: false,
+      },
     };
+  },
+  methods: {
+    activeLink(activeBool) {
+      for (let i = 0; i < this.links.length; i++) {
+        this.links[i].current = false;
+      }
+      activeBool.current = true;
+    },
   },
 };
 </script>
@@ -72,6 +84,7 @@ export default {
           :class="{ active: link.current }"
           v-for="(link, index) in links"
           :key="index"
+          @click="activeLink(link)"
         >
           {{ link.text }}
         </li>
