@@ -1,30 +1,34 @@
 <script>
 export default {
   name: "CardImage",
+  props: {
+    path: String,
+    title: String,
+  },
 };
 </script>
 
 <template>
   <div class="card">
-    <img
-      src="https://www.coverbrowser.com/image/action-comics/1-1.jpg"
-      alt=""
-    />
-    <span>titolo</span>
+    <img :src="path" alt="" />
+    <span>{{ title }}</span>
   </div>
 </template>
 
 <style lang="scss" scoped>
 .card {
-  height: 14rem;
-  background-color: red;
+  width: 8rem;
+  height: 12rem;
+  margin-bottom: 1rem;
   img {
+    width: 100%;
     height: 80%;
     display: block;
   }
 
   span {
     display: block;
+    font-size: 0.8rem;
     padding: 0.8rem 0;
   }
 }

@@ -106,7 +106,12 @@ export default {
         <span><strong>CURRENT SERIES</strong></span>
       </div>
       <div class="containerCard">
-        <CardImage />
+        <CardImage
+          v-for="(photo, index) in images"
+          :key="index"
+          :path="photo.thumb"
+          :title="photo.series.toUpperCase()"
+        />
       </div>
     </div>
   </div>
@@ -146,19 +151,6 @@ export default {
       flex-wrap: wrap;
       justify-content: space-around;
       gap: 1rem;
-      // .card {
-      //   height: 14rem;
-      //   background-color: red;
-      //   img {
-      //     height: 80%;
-      //     display: block;
-      //   }
-
-      //   span {
-      //     display: block;
-      //     padding: 0.8rem 0;
-      //   }
-      // }
     }
   }
 }
