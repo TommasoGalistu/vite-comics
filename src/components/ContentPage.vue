@@ -1,4 +1,5 @@
 <script>
+import CardImage from "./CardImage.vue";
 export default {
   name: "ContentPage",
   data() {
@@ -89,15 +90,23 @@ export default {
       ],
     };
   },
+  components: {
+    CardImage,
+  },
 };
 </script>
 
 <template>
   <div class="containerAll">
-    <div class="contImg"></div>
+    <div class="contImg">
+      <div class="immagineJumbo"></div>
+    </div>
     <div class="mainContainer">
       <div class="button">
         <span><strong>CURRENT SERIES</strong></span>
+      </div>
+      <div class="containerCard">
+        <CardImage />
       </div>
     </div>
   </div>
@@ -112,11 +121,12 @@ export default {
   color: white;
 
   .contImg {
-    display: block;
-    height: 20rem;
-    width: 100%;
-    background-image: url("../assets/jumbotron.jpg");
-    background-size: cover;
+    .immagineJumbo {
+      height: 20rem;
+      width: 100%;
+      background-image: url("../assets/jumbotron.jpg");
+      background-size: cover;
+    }
   }
   .mainContainer {
     position: relative;
@@ -128,6 +138,27 @@ export default {
         padding: 1rem;
         background-color: #0282f9;
       }
+    }
+    .containerCard {
+      width: 100%;
+      padding: 3rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 1rem;
+      // .card {
+      //   height: 14rem;
+      //   background-color: red;
+      //   img {
+      //     height: 80%;
+      //     display: block;
+      //   }
+
+      //   span {
+      //     display: block;
+      //     padding: 0.8rem 0;
+      //   }
+      // }
     }
   }
 }
