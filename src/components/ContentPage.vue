@@ -88,10 +88,32 @@ export default {
           type: "graphic novel",
         },
       ],
+      // BONUS
+      // datiFetch: [],
     };
   },
   components: {
     CardImage,
+  },
+  mounted() {
+    // BONUS
+    // fetch("/src/data/dc-comics-2.json")
+    //   .then((response) => {
+    //     console.log("Raw response:", response);
+    //     if (!response.ok) {
+    //       throw new Error("ERROOR");
+    //     }
+    //     return response.text();
+    //   })
+    //   .then((text) => {
+    //     console.log("TESTO:", text);
+    //     return JSON.parse(text);
+    //   })
+    //   .then((data) => {
+    //     this.datiFetch = data;
+    //     console.log("Dati caricati:", this.datiFetch);
+    //   })
+    //   .catch((error) => console.error("Errore nel caricamento", error));
   },
 };
 </script>
@@ -103,7 +125,7 @@ export default {
     </div>
     <div class="mainContainer">
       <div class="button">
-        <span><strong>CURRENT SERIES</strong></span>
+        <span class="bottone"><strong>CURRENT SERIES</strong></span>
       </div>
       <div class="containerCard">
         <CardImage
@@ -112,6 +134,9 @@ export default {
           :path="photo.thumb"
           :title="photo.series.toUpperCase()"
         />
+      </div>
+      <div class="viewContinue">
+        <span class="bottone"><strong>LOAD MORE</strong></span>
       </div>
     </div>
   </div>
@@ -138,11 +163,6 @@ export default {
     .button {
       position: absolute;
       top: -10px;
-
-      span {
-        padding: 1rem;
-        background-color: #0282f9;
-      }
     }
     .containerCard {
       width: 100%;
@@ -151,6 +171,19 @@ export default {
       flex-wrap: wrap;
       justify-content: space-around;
       gap: 1rem;
+    }
+    .viewContinue {
+      text-align: center;
+      padding-bottom: 2rem;
+    }
+  }
+  .bottone {
+    padding: 1rem;
+    background-color: #0282f9;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #67b3fa;
     }
   }
 }

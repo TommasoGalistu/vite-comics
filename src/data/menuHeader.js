@@ -7,7 +7,7 @@ const links = [
     {
         text: "COMICS",
         url: "#",
-        current: false,
+        current: true,
     },
     {
         text: "MOVIES",
