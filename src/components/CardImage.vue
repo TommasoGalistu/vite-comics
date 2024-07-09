@@ -4,13 +4,14 @@ export default {
   props: {
     path: String,
     title: String,
+    subTitle: String,
   },
 };
 </script>
 
 <template>
   <div class="card">
-    <img :src="path" alt="" />
+    <img :src="path" :alt="subTitle" />
     <span>{{ title }}</span>
   </div>
 </template>

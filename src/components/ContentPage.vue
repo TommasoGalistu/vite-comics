@@ -133,6 +133,7 @@ export default {
           :key="index"
           :path="photo.thumb"
           :title="photo.series.toUpperCase()"
+          :subTitle="photo.type"
         />
       </div>
       <div class="viewContinue">
